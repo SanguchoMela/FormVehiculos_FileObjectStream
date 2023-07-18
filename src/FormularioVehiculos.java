@@ -39,8 +39,6 @@ public class FormularioVehiculos {
                 ){
 
                     listaVehiculos = (ArrayList<Vehiculo>) objectIn.readObject();
-                    JOptionPane.showMessageDialog(null, "Datos cargados correctamente.", "Cargar Datos",
-                            JOptionPane.INFORMATION_MESSAGE);
 
                     totalVehiculos = listaVehiculos.size();
                     indiceActual = 0;
@@ -48,6 +46,9 @@ public class FormularioVehiculos {
                     for(Vehiculo vehiculo:listaVehiculos){
                         System.out.println(vehiculo.toString());
                     }
+
+                    JOptionPane.showMessageDialog(null, "Datos cargados correctamente.", "Cargar Datos",
+                            JOptionPane.INFORMATION_MESSAGE);
 
                 } catch (IOException | ClassNotFoundException ex) {
                     JOptionPane.showMessageDialog(null, "Error al cargar los datos.", "Error",
